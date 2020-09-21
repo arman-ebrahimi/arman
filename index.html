@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>about me</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			background-color: darkcyan;
+			margin: 0;
+		}
+		.menubar{
+			background-color: white;
+			overflow: hidden;
+		}
+		.menu{
+			display: inline-block;
+			padding:20px 30px;
+			color:#000;
+			font-size: 20px;
+			text-decoration: none;
+			transition: 0.3s;
+		}
+		.menu:hover:not(.m-active){
+			background-color: #888;
+			color: white;
+		}
+		.m-right{
+			float: right;
+		}
+		.m-left{
+			float: left;
+		}
+		.m-active{
+			background-color: #00ab77;
+			color: white;
+		}
+		.container{
+			width: 50%;
+			margin: auto;
+			background-color: white;
+			position: relative;
+			border-radius: 4px;
+		}
+		.text-over{
+			position: absolute;
+			top: 15%;
+			left: 4%;
+			font-size: 22px;
+			color: white;
+			line-height: 10px;
+			font-weight: bold;
+		}
+		.about{
+			width: 70%;
+			height: auto;
+			margin:auto;
+			padding: 30px 60px;
+		}
+		.btn-link{
+			display: block;
+			width: 100%;
+			margin: auto;
+			padding: 15px 25px;
+			text-decoration: none;
+			color: white;
+			background-color: teal;
+			font-size: 20px;
+			border-radius: 4px;
+			text-align: center;
+		}
+		.btn-link:hover{
+			background-color: darkcyan;
+		}
+		p{
+			line-height: 1.5em;
+			text-transform: capitalize;
+		}
+		p.shadow{
+			text-shadow: 4px 4px 2px black, -2px -2px 2px black;
+		}
+		.cr7{
+			display: inline-block;
+			margin-left: 60px;
+			text-align: center;
+		}
+		span{
+			color: #999;
+		}
+		.grid{
+			display: grid;
+			justify-content: space-around;
+			grid-template-columns: auto auto auto;
+		}
+		.footer{
+			background-color: white;
+			padding: 15px 30px;
+			font-size: 20px;
+		}
+		.l-footer{
+			text-decoration: none;
+			color: white;
+			background-color: teal;
+			padding: 5px 25px;
+			border-radius: 4px;
+		}
+		.l-footer:hover{
+			background-color: darkcyan;
+		}
+		.cover{
+			visibility: hidden;
+			position: absolute;
+			top: 70px;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: auto;
+			background-color: white;
+			z-index: 1;
+			transition: width 0.5s;
+		}
+		@media screen and (max-width: 992px){
+			.container{
+				width: 80%;
+			}
+			.text-over{
+				top: 10%;
+			}
+		}
+		@media screen and (max-width: 600px){
+			.container{
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="menubar">
+	<a href="#" class="menu m-left m-active" onclick="visible()">home</a>
+	<a href="#" class="menu m-left">features</a>
+	<a href="#" class="menu m-right">about me</a>
+	<a href="#" class="menu m-right">log in</a>
+</div>
+<div class="cover" id="cover">
+		<p class="item-cover">ff</p>
+		<p class="item-cover">bb</p>
+		<p class="item-cover">vv</p>
+		<a href="#" onclick="hidden()">return</a>
+</div>
+<br><br>
+<div class="container">
+	<img src="cr7.jpg" alt="cr7" style="width: 100%;border-radius: 4px;"><!--address relative(image is placed beside the file)-->
+	<div class="text-over">
+		<p class="shadow">Cristiano Ronaldo</p>
+		<p class="shadow">Professional Footballer</p>
+		<p style="color: #000;">Juventus Player</p>
+	</div>
+	<div class="about">
+	    <a class="btn-link" href="https://www.juventus.com/en/">Visit Juventus Website</a><br>
+	    <p>I am a professional player that I play for juventus.I have five gold balls.I am from portugal and I started my football
+	    career in sporting lisbon.</p>
+	    <p>My skills are header,shoot,speed,drible,free-kick and penalty.my nickname is CR7.</p>
+	    <div class="cr7">
+	    	<p><span>PLAY</span></p>
+	    	<p>juventus club</p>
+	    </div>
+	    <div class="cr7">
+	    	<p><span>COUNTRY</span></p>
+	    	<p>italy</p>
+	    </div><br><br>
+	    <div class="grid">
+	        <a href="https://twitter.com/cristiano?lang=en"><img src="https://img.icons8.com/android/48/000000/twitter.png"/></a>
+	        <a href="facebook.com/cristiano"><img src="https://img.icons8.com/material-sharp/48/000000/facebook-new.png"/></a>
+	        <a href="https://www.instagram.com/accounts/login/?next=/cristiano/"><img src="https://img.icons8.com/fluent/50/000000/instagram-new.png"/></a>
+	    </div>
+    </div>
+</div>
+<br><br>
+<div class="footer">
+	This is My Website : <a class="l-footer" href="https://www.cristianoronaldo.com/#cr7">My Website</a>
+</div>
+<script type="text/javascript">
+	function visible(){
+		document.getElementById('cover').style.visibility="visible";
+		document.getElementById('cover').style.width="100%";
+	}
+</script>
+<script type="text/javascript">
+	function hidden(){
+		document.getElementByClassName('cover').style.display="none";
+		document.getElementByClassName('cover').style.width="0";
+	}
+</script>
+</body>
+</html>
